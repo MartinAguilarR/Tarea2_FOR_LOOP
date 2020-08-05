@@ -1,4 +1,4 @@
-#TAREA N°2 - FOR LOOP
+#TAREA NÂ°2 - FOR LOOP
 
   # Dada la siguiente lista:
 
@@ -10,25 +10,32 @@ listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of"
                         c("mp","Jose","Pedro","Antonela"),c("of","av05","meca"),
                         c("of","av04","dape"),c("of","av02","arme"))
 
-largodocs<- length(listaDocumentos)
+#ExploraciÃ³n lista
 
+largodocs<- length(listaDocumentos)
 print(listaDocumentosfinal)
 print(listaDocumentos)
 
 # EJERCICIO 1 
 
- # Las mp tienen los nombres de las personas a las cuales están asociadas,
-  # realice una función que cuente cuántos niños hay por cada una, y entregue una estadística
-   # de cuántos niños hay por mp.
+   # Las mp tienen los nombres de las personas a las cuales estÃ¡n asociadas,
+    # realice una funciÃ³n que cuente cuÃ¡ntos niÃ±os hay por cada una, y entregue una estadÃ­stica
+     # de cuÃ¡ntos niÃ±os hay por mp.
 
 #PROCEDIMIENTO    
 
     #(1) Generar un loop, tal que reconozca al 1er elemento del vector; "mp" o "of".
-      # (2) A continuación, al generar un filtro, la maquina debe contabilizar el número de nombres dentro del vector.
-        # (3) Una vez tenga todo los "mp" identificados y el número de nombres, saco la estadística del total de "Mps y nombres",
-           # como el promedio de "nombres x mp".
-              # (4) Arrojar mensaje.
+      # (2) A continuaciÃ³n, generar un filtro para que la maquina pueda contabilizar el nÃºmero de nombres dentro del vector.
+        # (3) Una vez tenga todo los "mp" identificados y el nÃºmero de nombres, calcular estadÃ­sticas.
+           # (4) Arrojar mensaje.
 
+
+listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of","av01","ante"),
+                        c("of","av08","arme"),c("of","av02","ante"),c("of","av07","ampr"),
+                        c("of","av03","dape"),c("of","av01","meca"),c("of","av02","dape"),
+                        c("mp","Antonia"),c("mp","Christian","Mario"),
+                        c("mp","Jose","Pedro","Antonela"),c("of","av05","meca"),
+                        c("of","av04","dape"),c("of","av02","arme"))
 
 contadormp <- 0
 
@@ -36,23 +43,25 @@ for(mp in listaDocumentos){
   if(mp[1] == "mp"){
     contadormp <- contadormp + 1
     identificador <- mp[-1]
-    print(paste("Se cuenta con 1 mp de", length(identificador), "niñx(s)"))
+    print(paste("Se cuenta con 1 mp de", length(identificador), "niÃ±x(s)"))
 }else{
   next()
   }
 }
 
-#RESULTADO ESTADÍSTICO  
+#RESULTADO ESTADÃSTICO  
 
 print(paste("Se cuenta con una cantidad de",contadormp, "archivos mp"))
 
+rm(list=ls())
 
+====================================       ====================================
 
 
 # EJERCICIO 2
 
-  # Los oficios están compuestos por el código al cual pertenecen, construya
-    # una función que almacene los códigos y las temáticas a las que están asociadas.
+  # Los oficios estÃ¡n compuestos por el cÃ³digo al cual pertenecen, construya
+    # una funciÃ³n que almacene los cÃ³digos y las temÃ¡ticas a las que estÃ¡n asociadas.
   
 
 #PROCEDIMIENTO
@@ -61,6 +70,12 @@ print(paste("Se cuenta con una cantidad de",contadormp, "archivos mp"))
         # (3) Arrojar mensaje.
 
 
+listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of","av01","ante"),
+                        c("of","av08","arme"),c("of","av02","ante"),c("of","av07","ampr"),
+                        c("of","av03","dape"),c("of","av01","meca"),c("of","av02","dape"),
+                        c("mp","Antonia"),c("mp","Christian","Mario"),
+                        c("mp","Jose","Pedro","Antonela"),c("of","av05","meca"),
+                        c("of","av04","dape"),c("of","av02","arme"))
 
 contadorof <- 0
 
@@ -73,24 +88,34 @@ for(of in listaDocumentos){
   }
 }
 
+rm(list=ls())
 
 
+====================================       ====================================
 
 
 # Ejercicio 3
 
-# Construya una función que actúe de juez y retorne aprobada o reprobada
+# Construya una funciÃ³n que actÃºe de juez y retorne aprobada o reprobada
 # para los diferentes oficios, y entregue la cantidad que hay de cada una
 
 
 
-# RESOLUCIÖN
+# RESOLUCIÃ–N
   # (1) Debo generar un loop que identifique los valores "Of" de la lista; usaremos condicional if.
     # (2) Una vez se identifica el documento, se debe aplica otro filtro if, en pro de categorizar 
       #    el tipo de documentos aprobado y reprobado.
-        # (3) El juez-bot aplicará su objetividad, rechazando el documento, si este posee antecedentes y medidas cautelares;
-        #  Aprobará si este sólo posee datos personales y ampliación medidas de protección,
-        #   en sentido contrario, el Juez-bot reprobará el documento.
+        # (3) El juez-bot aplicarÃ¡ su objetividad, rechazando el documento, si este posee antecedentes y medidas cautelares;
+        #  AprobarÃ¡ si este sÃ³lo posee datos personales y ampliaciÃ³n medidas de protecciÃ³n,
+        #   en sentido contrario, el Juez-bot reprobarÃ¡ el documento.
+
+
+listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of","av01","ante"),
+                        c("of","av08","arme"),c("of","av02","ante"),c("of","av07","ampr"),
+                        c("of","av03","dape"),c("of","av01","meca"),c("of","av02","dape"),
+                        c("mp","Antonia"),c("mp","Christian","Mario"),
+                        c("mp","Jose","Pedro","Antonela"),c("of","av05","meca"),
+                        c("of","av04","dape"),c("of","av02","arme"))
 
 contarof <- 0
 contarReprob <- 0
@@ -111,6 +136,4 @@ for(Documento in listaDocumentos){
 print(paste("Del total de", contarof, "documentos;", "Se Aprueban", contarAprob,";","y se Reprueban", contarReprob))
 
 
-
-#RESTAR TAREA
 rm(list=ls())
