@@ -15,7 +15,7 @@ largodocs<- length(listaDocumentos)
 print(listaDocumentosfinal)
 print(listaDocumentos)
 
-# EJERCICIO 1 (3 ptos)
+# EJERCICIO 1 
 
  # Las mp tienen los nombres de las personas a las cuales están asociadas,
   # realice una función que cuente cuántos niños hay por cada una, y entregue una estadística
@@ -59,6 +59,21 @@ print(paste("Se cuenta con una cantidad de",contadormp, "archivos mp"))
     #(1) Generar un loop, tal que reconozca al 1er elemento del vector; "mp" o "of".
       # (2) Una vez identifique el archivo tipo "of",debe identificar su contenido.
         # (3) Arrojar mensaje.
+
+
+
+contadorof <- 0
+
+for(vectores in listaDocumentos){
+  if(vectores[1] == "of"){
+    identificador <- vectores[-1]
+    print(paste("Se cuenta con los archivos", identificador[-2], "tipo ;", identificador[-1]))
+  }else{
+    next()
+  }
+}
+
+
 
 
 
