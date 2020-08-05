@@ -1,4 +1,9 @@
 
+#TAREA nÂ°2 - FOR LOOP
+
+  # Dada la siguiente lista:
+
+
 listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of","av01","ante"),
                         c("of","av08","arme"),c("of","av02","ante"),c("of","av07","ampr"),
                         c("of","av03","dape"),c("of","av01","meca"),c("of","av02","dape"),
@@ -6,25 +11,24 @@ listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of"
                         c("mp","Jose","Pedro","Antonela"),c("of","av05","meca"),
                         c("of","av04","dape"),c("of","av02","arme"))
 
-listaDocumentosfinal <- length(listaDocumentos)
+largodocs<- length(listaDocumentos)
 
 print(listaDocumentosfinal)
 print(listaDocumentos)
 
-# Ejercicio 1 (3 ptos)
+# EJERCICIO 1 (3 ptos)
 
-# Las mp tienen los nombres de las personas a las cuales están asociadas,
-# realice una función que cuente cuántos niños hay por cada una, y entregue una estadística
-# de cuántos niños hay por mp.
-
-
+ # Las mp tienen los nombres de las personas a las cuales estÃ¡n asociadas,
+  # realice una funciÃ³n que cuente cuÃ¡ntos niÃ±os hay por cada una, y entregue una estadÃ­stica
+   # de cuÃ¡ntos niÃ±os hay por mp.
 
 
-#  (1) Debo generar un condicional, tal que me reconozca el 1er elemento del vector; "mp" o "of"
-# (2) A continuación, al generar un filtro, la maquina debe contabilizar el número de nombres dentro del vector
-#     ¿2ble If?
-# (3) Una vez tenga todo los "mp" identificados y el número de nombres, saco la estadística del total de "Mps y nombres"
-#   , como el promedio de "nombres x mp"
+
+
+#(1) Debo generar un condicional, tal que me reconozca el 1er elemento del vector; "mp" o "of"
+  # (2) A continuaciÃ³n, al generar un filtro, la maquina debe contabilizar el nÃºmero de nombres dentro del vector.
+    # (3) Una vez tenga todo los "mp" identificados y el nÃºmero de nombres, saco la estadÃ­stica del total de "Mps y nombres",
+      # como el promedio de "nombres x mp"
 
 
 contadormp <- 0
@@ -33,17 +37,21 @@ for(vectores in listaDocumentos){
   if(vectores[1]=="mp"){
     contadormp <- contadormp + 1
     vectores <- vectores[-1]
-    print(paste("Se cuenta con 1 mp de", length(vectores), "niños"))
+    print(paste("Se cuenta con 1 mp de", length(vectores), "niÃ±x(s)"))
+    promedio <- contadormp / length(vectores)
+}else{
+  next()
   }
 }
 
-  
-print(paste("Se cuenta con una cantidad de mp igual a",contadormp))
+  #EstadÃ­sticas asociadas
+    print(paste("Se cuenta con una cantidad de",contadormp, "archivos mp"))
+
 
 
 # Ejercicio 2 (3 ptos)
-# Los oficios están compuestos por el código al cual pertenecen, construya
-# una función que almacene los códigos y las temáticas a las que están asociadas.
+# Los oficios estÃ¡n compuestos por el cÃ³digo al cual pertenecen, construya
+# una funciÃ³n que almacene los cÃ³digos y las temÃ¡ticas a las que estÃ¡n asociadas.
   
   
 contadorof <- 0
@@ -58,7 +66,7 @@ for(vectores in listaDocumentos){
 
 # Ejercicio 3(2 ptos)
 }
-# Construya una función que actúe de juez y retorne aprobada o reprobada
+# Construya una funciÃ³n que actÃºe de juez y retorne aprobada o reprobada
 # para los diferentes oficios, y entregue la cantidad que hay de cada una
 
 contadorof <- 0
