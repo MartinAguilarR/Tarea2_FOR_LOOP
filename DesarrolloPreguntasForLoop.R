@@ -16,6 +16,11 @@ largodocs<- length(listaDocumentos)
 print(listaDocumentosfinal)
 print(listaDocumentos)
 
+
+
+====================================       ====================================
+
+
 # EJERCICIO 1 
 
    # Las mp tienen los nombres de las personas a las cuales están asociadas,
