@@ -1,5 +1,4 @@
-
-#TAREA n°2 - FOR LOOP
+#TAREA N°2 - FOR LOOP
 
   # Dada la siguiente lista:
 
@@ -22,74 +21,44 @@ print(listaDocumentos)
   # realice una función que cuente cuántos niños hay por cada una, y entregue una estadística
    # de cuántos niños hay por mp.
 
+#PROCEDIMIENTO    
 
-
-
-#(1) Debo generar un condicional, tal que me reconozca el 1er elemento del vector; "mp" o "of"
-  # (2) A continuación, al generar un filtro, la maquina debe contabilizar el número de nombres dentro del vector.
-    # (3) Una vez tenga todo los "mp" identificados y el número de nombres, saco la estadística del total de "Mps y nombres",
-      # como el promedio de "nombres x mp"
+    #(1) Generar un loop, tal que reconozca al 1er elemento del vector; "mp" o "of".
+      # (2) A continuación, al generar un filtro, la maquina debe contabilizar el número de nombres dentro del vector.
+        # (3) Una vez tenga todo los "mp" identificados y el número de nombres, saco la estadística del total de "Mps y nombres",
+           # como el promedio de "nombres x mp".
+              # (4) Arrojar mensaje.
 
 
 contadormp <- 0
 
 for(vectores in listaDocumentos){
-  if(vectores[1]=="mp"){
+  if(vectores[1] == "mp"){
     contadormp <- contadormp + 1
     vectores <- vectores[-1]
     print(paste("Se cuenta con 1 mp de", length(vectores), "niñx(s)"))
-    promedio <- contadormp / length(vectores)
 }else{
   next()
   }
 }
 
-  #Estadísticas asociadas
-    print(paste("Se cuenta con una cantidad de",contadormp, "archivos mp"))
+#RESULTADO ESTADÍSTICO  
+
+print(paste("Se cuenta con una cantidad de",contadormp, "archivos mp"))
 
 
 
-# Ejercicio 2 (3 ptos)
-# Los oficios están compuestos por el código al cual pertenecen, construya
-# una función que almacene los códigos y las temáticas a las que están asociadas.
+
+# EJERCICIO 2
+
+  # Los oficios están compuestos por el código al cual pertenecen, construya
+    # una función que almacene los códigos y las temáticas a las que están asociadas.
   
-  
-contadorof <- 0
 
-for(vectores in listaDocumentos){
-  if(vectores[1] == "of"){
-    identificador <- vectores[-1]
-    print(paste("Se cuenta con los archivos", identificador[-2], "tipo ;", identificador[-1]))
-  }
-}
-
-
-# Ejercicio 3(2 ptos)
-}
-# Construya una función que actúe de juez y retorne aprobada o reprobada
-# para los diferentes oficios, y entregue la cantidad que hay de cada una
-
-contadorof <- 0
-contadoraprobado <- 0
-contadorreprobado <- 0
-
-for (vectores in listaDocumentos){
-  if(vectores[1]=="of"){
-    contadorof <- contadorof +1
-    nuevosvectores <- vectores[-1]
-    if(nuevosvectores[2:3]=="ante"||nuevosvectores[2:3]=="meca"||nuevosvectores[2:3]=="arme"){
-      contadorreprobado <- contadorreprobado +1
-    }else if(nuevosvectores[2:3]=="dape"||nuevosvectores[2:3]=="ampr"){
-      contadoraprobado <- contadoraprobado +1
-    }
-  }
-}
-
-print(paste("llegaron",contadorof,"oficios de los cuales:",contadorreprobado,"son reprobados", "y",contadoraprobado,"son aprobados"))
-
-
-
-
+#PROCEDIMIENTO
+    #(1) Generar un loop, tal que reconozca al 1er elemento del vector; "mp" o "of".
+      # (2) Una vez identifique el archivo tipo "of",debe identificar su contenido.
+        # (3) Arrojar mensaje.
 
 
 
