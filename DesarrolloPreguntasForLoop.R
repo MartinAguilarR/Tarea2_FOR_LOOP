@@ -16,7 +16,9 @@ largodocs<- length(listaDocumentos)
 print(listaDocumentosfinal)
 print(listaDocumentos)
 
-
+# largo de lista= 15
+# Vectores con elementos tipo "character"
+# 2 tipos de archivos
 
 ====================================       ====================================
 
@@ -53,12 +55,14 @@ for(mp in listaDocumentos){
   next()
   }
 }
-
-#RESULTADO ESTADÍSTICO  
-
 print(paste("Se cuenta con una cantidad de",contadormp, "archivos mp"))
 
-rm(list=ls())
+
+
+rm(list = ls())
+
+
+
 
 ====================================       ====================================
 
@@ -135,10 +139,15 @@ for(Documento in listaDocumentos){
       contarReprob <- contarReprob + 1
     }else if(identificador[2:3] == "dape" || identificador[2:3] == "arme"){
       contarAprob <- contarAprob + 1
+    }else{
+      print("no calificado")
     }
   }
 }
+
 print(paste("Del total de", contarof, "documentos;", "Se Aprueban", contarAprob,";","y se Reprueban", contarReprob))
 
 
+
+#RESTAR TAREA
 rm(list=ls())
